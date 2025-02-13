@@ -7,7 +7,6 @@ const form = document.querySelector("#sumar-form");
 const div = document.querySelector("#resultado-div");
 const selectOperation = document.querySelector("#operacion");
 
-// Mapeo de operaciones
 const operaciones = {
   sumar,
   multiplicar,
@@ -20,7 +19,6 @@ form.addEventListener("submit", (event) => {
   const secondNumber = Number.parseInt(second.value);
   const operacionSeleccionada = selectOperation.value;
 
-  // Ejecutamos la operación seleccionada
   const resultado = operaciones[operacionSeleccionada](firstNumber, secondNumber);
 
   div.innerHTML = `<p>Resultado: ${resultado}</p>`;
