@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html xml:lang="es">
   <head>
-    <title>Sumador</title>
+    <title>Calculadora</title>
   </head>
   <body>
-    <h1>Sumador</h1>
+    <h1>Calculadora</h1>
     <form id="sumar-form">
       <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
+      <input type="number" id="primer-numero" required />
+
       <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
+      <input type="number" id="segundo-numero" required />
+
+      <label for="operacion">Operación:</label>
+      <select id="operacion">
+        <option value="sumar">Sumar</option>
+        <option value="multiplicar">Multiplicar</option>
+      </select>
+
+      <input type="submit" value="Calcular" />
     </form>
+
     <div id="resultado-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
